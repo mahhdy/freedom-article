@@ -40,7 +40,7 @@
 ]
 
 % ─── خط اصلی ─────────────────────────────────────────────────
-  (-0.5,0) -- (16.5,0) node[right,font=\small\bfseries,color=PrimaryDeep] {\rl{زمان}}; % FIXED: متن فارسی در TikZ
+\draw[-Stealth, thick] (-0.5,0) -- (16.5,0) node[right,font=\small\bfseries,color=PrimaryDeep] {\rl{زمان}}; % FIXED: \draw اضافه شد
 
 % ─── نشانگرهای زمانی ─────────────────────────────────────────
 \foreach \x/\label in {
@@ -49,7 +49,7 @@
   6/{\lr{1300}},
   9/{\lr{1650}},
   12/{\lr{1850}},
-  15/{\lr{2000}}
+  15/{\lr{2000}}%
 }{
   \draw[thick, PrimaryDeep] (\x,-0.15) -- (\x,0.15);
   \node[below, font=\scriptsize\color{NeutralDark}] at (\x,-0.2) {\label};
@@ -146,7 +146,7 @@
   10.5/{اختناق},
   12.2/{از خودبیگانگی},
   13.8/{سلطه},
-  15.2/{محرومیت}
+  15.2/{محرومیت}%
 }{
   \node[below, font=\tiny, color=AccentRed, rotate=30, anchor=north west]
     at (\x,-0.5) {\rl{\enemy}}; % FIXED: \rl
@@ -181,7 +181,7 @@
   agree/.style={-Stealth, thick, AccentTeal!80, double},
   disagree/.style={-Stealth, thick, AccentRed!80, dashed},
   influence/.style={-Stealth, thick, AccentGold, dotted, line width=1.5pt},
-  lbl/.style={font=\tiny, fill=white, inner sep=1pt},
+  lbl/.style={font=\tiny, fill=white, inner sep=1pt, align=center},
 ]
 
 % ─── مراکز مکاتب ──────────────────────────────────────────────
@@ -397,7 +397,7 @@
     font=\small\bfseries,
   },
   arrow/.style={Stealth-Stealth, thick, AccentRed!70},
-  lbl/.style={font=\tiny, fill=white, inner sep=2pt, rounded corners},
+  lbl/.style={font=\tiny, fill=white, inner sep=2pt, rounded corners, align=center},
 ]
 
 % مرکز

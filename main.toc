@@ -1,0 +1,61 @@
+\contentsline {section}{\numberline {1}جغرافیای مفهومی آزادی: نگاهی شماتیک}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}خط زمانی: ۲۵۰۰ سال تعبیرسازی آزادی}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}نقشه‌ی مکتبی: چه کسانی با چه کسانی گفتگو داشتند؟}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}ماتریس مقایسه‌ای: متفکران و ابعاد آزادی}{3}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}نقشه‌ی دشمنان مفهومی آزادی}{4}{subsection.1.4}%
+\contentsline {section}{\numberline {2}امواج تحول: زمینه، نظریه، نتیجه، نقد}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1}موج اول: از بردگی تا شهروندی (دوران باستان)}{7}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}موج دوم: اختیار، اراده و الهیات (قرون وسطی)}{7}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}موج سوم: حق طبیعی، قرارداد، و انقلاب (مدرن اولیه)}{8}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}موج چهارم: فردگرایی، رهایی، ایدئالیسم (قرن ۱۹)}{8}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}موج پنجم: آزادی منفی در برابر مثبت (قرن ۲۰)}{9}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}موج ششم: قابلیت، شناسایی، و رهایی‌بخشی (معاصر)}{10}{subsection.2.6}%
+\contentsline {section}{\numberline {3}تحلیل تطبیقی مفهوم آزادی در فلسفه‌ی سیاسی}{11}{section.3}%
+\contentsline {subsection}{\numberline {3.1}مقدمه و روش‌شناسی}{11}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}آزادی منفی: از هابز تا برلین}{11}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}صورت‌بندی اولیه: هابز}{11}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}کمال‌یابی با آیزایا برلین}{11}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}نقدهای وارد بر برلین}{12}{subsubsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.3}آزادی مثبت: از روسو تا تیلور}{12}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}آزادی جمهوری‌خواهانه: عدم سلطه}{13}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}رویکرد قابلیت: سن و نوسبام}{13}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}آزادی در مکاتب راست، چپ، و میانه}{14}{subsection.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}تنش‌های ساختاری: سه بحران اصلی}{14}{subsubsection.3.6.1}%
+\contentsline {paragraph}{۱. تنش فرد/جامعه:}{14}{paragraph*.1}%
+\contentsline {paragraph}{۲. تنش صوری/واقعی:}{14}{paragraph*.2}%
+\contentsline {paragraph}{۳. تنش آزادی/امنیت:}{14}{paragraph*.3}%
+\contentsline {subsection}{\numberline {3.7}آزادی اگزیستانسیالیستی: انتخاب، مسئولیت، هستی}{15}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}آزادی فمینیستی و پسااستعماری}{15}{subsection.3.8}%
+\contentsline {section}{\numberline {4}مفاهیم مجاور و زیست‌بوم مفهومی آزادی}{16}{section.4}%
+\contentsline {subsection}{\numberline {4.1}نقشه‌ی زیست‌بوم مفهومی آزادی}{16}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}مفاهیم مجاور: تشریح تطبیقی}{16}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}دشمنان مفهومی: فهرست تفصیلی}{17}{subsection.4.3}%
+\contentsline {section}{\numberline {5}آثار اصلی نظریه‌پردازان: راهنمای مطالعه}{18}{section.5}%
+\contentsline {section}{\numberline {آ}پیوست الف: آزادی در سنت اسلامی–ایرانی}{21}{appendix.Alph1}%
+\contentsline {subsection}{\numberline {آ.1}آ.۱ — آزادی در برابر بردگی: تقابل اسلام و یونان باستان}{21}{subsection.Alph1.1}%
+\contentsline {subsubsection}{\numberline {آ.1.1}وضعیت بردگی در پولیس یونانی}{21}{subsubsection.Alph1.1.1}%
+\contentsline {subsubsection}{\numberline {آ.1.2}پاسخ اسلامی: توحید و کرامت عمومی}{21}{subsubsection.Alph1.1.2}%
+\contentsline {subsubsection}{\numberline {آ.1.3}مقایسه‌ی تطبیقی: اسلام در برابر یونان}{21}{subsubsection.Alph1.1.3}%
+\contentsline {subsection}{\numberline {آ.2}آ.۲ — آزادی و استبداد در حکمرانی: تنش اصلی سنت اسلامی–ایرانی}{21}{subsection.Alph1.2}%
+\contentsline {subsubsection}{\numberline {آ.2.1}ساختار کلاسیک: امامت، خلافت، و سلطنت}{21}{subsubsection.Alph1.2.1}%
+\contentsline {subsubsection}{\numberline {آ.2.2}بحث آزادی در اندیشه‌ی متکلمان}{22}{subsubsection.Alph1.2.2}%
+\contentsline {subsection}{\numberline {آ.3}آ.۳ — بحث ایرانشهری: آزادی در سنت اندیشه‌ی سیاسی ایرانی}{23}{subsection.Alph1.3}%
+\contentsline {subsubsection}{\numberline {آ.3.1}سنت اندرزنامه‌ای و عدالت پادشاهی}{23}{subsubsection.Alph1.3.1}%
+\contentsline {subsubsection}{\numberline {آ.3.2}انتقاد طباطبایی: افول اندیشه‌ی سیاسی ایرانی}{23}{subsubsection.Alph1.3.2}%
+\contentsline {subsubsection}{\numberline {آ.3.3}طبقه‌بندی مواضع درباره‌ی اسلام و آزادی}{23}{subsubsection.Alph1.3.3}%
+\contentsline {section}{\numberline {ب}پیوست ب: تشریح تکمیلی نکات تحلیلی}{24}{appendix.Alph2}%
+\contentsline {subsection}{\numberline {ب.1}ب.۱ — انسان‌شناسی زیربنایی هر مکتب}{24}{subsection.Alph2.1}%
+\contentsline {subsection}{\numberline {ب.2}ب.۲ — تنش‌های ساختاری: پنج بحران حل‌نشده}{24}{subsection.Alph2.2}%
+\contentsline {subsection}{\numberline {ب.3}ب.۳ — سنت تحلیلی و قاره‌ای: یک گفتگوی ناتمام}{27}{subsection.Alph2.3}%
+\contentsline {subsection}{\numberline {ب.4}ب.۴ — آزادی در مکاتب راست، چپ و میانه: تحلیل تقابلی}{28}{subsection.Alph2.4}%
+\contentsline {subsection}{\numberline {ب.5}ب.۵ — آزادی در سنت پسااستعماری و فمینیستی}{30}{subsection.Alph2.5}%
+\contentsline {paragraph}{فانون و آزادی استعمارزده:}{30}{paragraph*.4}%
+\contentsline {paragraph}{اسپیواک و سکوت زیردست:}{30}{paragraph*.5}%
+\contentsline {paragraph}{فمینیسم و آزادی بدن:}{30}{paragraph*.6}%
+\contentsline {subsection}{\numberline {ب.6}ب.۶ — آزادی در عصر دیجیتال: چالش‌های معاصر}{30}{subsection.Alph2.6}%
+\contentsline {paragraph}{یک: معماری پنهان انتخاب (Nudge Architecture):}{31}{paragraph*.7}%
+\contentsline {paragraph}{دو: سرمایه‌داری نظارتی (Surveillance Capitalism):}{31}{paragraph*.8}%
+\contentsline {paragraph}{سه: آزادی الگوریتمی و تبعیض پنهان:}{31}{paragraph*.9}%
+\contentsline {subsection}{\numberline {ب.7}ب.۷ — جمع‌بندی: نقشه‌ی تنش‌های حل‌نشده}{32}{subsection.Alph2.7}%
+\contentsline {section}{کتاب‌شناسی و منابع}{33}{Item.10}%
+\contentsfinish 
