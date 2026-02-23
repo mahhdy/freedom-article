@@ -381,7 +381,7 @@
   }/PrimaryLight,
    6/{\rl{سوسیالیسم}\\%
   \rl{مارکسیستی}%
-  }/PrimaryDeep
+  }/PrimaryDeep%
 }{
   \draw[\col, thick] (\x, -0.3) -- (\x, 0.3);
   \node[below=0.35cm, \col, font=\scriptsize\bfseries] at (\x, 0) {\lbl};
@@ -514,7 +514,7 @@
     align=center,
     font=\small\bfseries
   },
-  tension/.style={
+  tensionbox/.style={
     rectangle, rounded corners=4pt,
     draw=AccentRed!70, thick,
     fill=AccentRed!6,
@@ -559,19 +559,19 @@
   };
 
 % تنش‌ها
-\node[tension] (t1) at (-2.5, 0.4) {\rl{فرد}\\% FIXED: گره چندخطی
+\node[tensionbox] (t1) at (-2.5, 0.4) {\rl{فرد}\\% FIXED: گره چندخطی
   \rl{در برابر جمع}%
   };
-\node[tension] (t2) at ( 2.5, 0.4) {\rl{صوری}\\%
+\node[tensionbox] (t2) at ( 2.5, 0.4) {\rl{صوری}\\%
   \rl{در برابر واقعی}%
   };
-\node[tension] (t3) at (0, 1.5)    {\rl{اقتدار}\\%
+\node[tensionbox] (t3) at (0, 1.5)    {\rl{اقتدار}\\%
   \rl{در برابر آزادی}%
   };
-\node[tension] (t4) at (-2.5,-1.2) {\rl{هویت}\\%
+\node[tensionbox] (t4) at (-2.5,-1.2) {\rl{هویت}\\%
   \rl{در برابر انتخاب}%
   };
-\node[tension] (t5) at ( 2.5,-1.2) {\rl{مسئولیت}\\%
+\node[tensionbox] (t5) at ( 2.5,-1.2) {\rl{مسئولیت}\\%
   \rl{در برابر ساختار}%
   };
 

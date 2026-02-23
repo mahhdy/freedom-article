@@ -17,15 +17,13 @@
 \usepackage{makecell}
 \usepackage{tikz}
 \usepackage{pgfplots}
-\usepackage{pgf-pie}
-\usepackage{mdframed}
 \usepackage{tcolorbox}
 \usepackage{fancyhdr}
 \usepackage{titlesec}
 \usepackage{titletoc}
 \usepackage{hyperref}
 \usepackage{enumitem}
-\usepackage{microtype}
+% \usepackage{microtype} % FIXED: حذف شد — سازگاری ناقص با XeLaTeX
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{multicol}
@@ -43,11 +41,11 @@
   arrows, arrows.meta, positioning, shapes, shapes.geometric,
   shapes.multipart, shadows, decorations, decorations.pathreplacing,
   decorations.markings, patterns, backgrounds, calc, fit,
-  mindmap, trees, timeline, matrix, chains, scopes,
-  fadings, through, plotmarks, intersections, bbox
+  mindmap, trees, matrix, chains, scopes,
+  fadings, through, plotmarks, intersections
 }
 \pgfplotsset{compat=1.18}
-\tcbuselibrary{skins, breakable, theorems, listings}
+\tcbuselibrary{skins, breakable}
 
 % ─── صفحه‌آرایی ───────────────────────────────────────────────
 \geometry{
@@ -97,6 +95,7 @@
     attach boxed title to top right={yshift=-2mm, xshift=-3mm},
     boxed title style={colback=PrimaryMid, colframe=PrimaryDeep},
     top=4mm, bottom=4mm,
+    before skip=12pt, after skip=12pt,
   },
   defbox/.style={
     enhanced, breakable,
@@ -105,6 +104,7 @@
     left=4mm, right=4mm,
     borderline west={3pt}{0pt}{AccentAmber},
     sharp corners,
+    before skip=12pt, after skip=12pt,
   },
   wavebox/.style={
     enhanced, breakable,
@@ -112,6 +112,7 @@
     fonttitle=\bfseries,
     rounded corners,
     drop shadow,
+    before skip=12pt, after skip=12pt,
   },
   quotebox/.style={
     enhanced, breakable,
@@ -120,12 +121,14 @@
     left=8mm,
     borderline west={4pt}{0pt}{NeutralMid},
     sharp corners=south,
+    before skip=12pt, after skip=12pt,
   },
   enemybox/.style={
-    enhanced,
+    enhanced, breakable,
     colback=red!5, colframe=AccentRed,
     fonttitle=\bfseries,
     borderline west={3pt}{0pt}{AccentRed},
+    before skip=12pt, after skip=12pt,
   },
 }
 
@@ -143,12 +146,12 @@
 \titleformat{\section}[block]
   {\Large\bfseries\color{PrimaryDeep}}
   {\thesection}{1em}{}
-  [\vspace{2pt}\color{AccentGold}\titlerule[1.5pt]]
+  [{\color{AccentGold}\titlerule[1.5pt]}]
 
 \titleformat{\subsection}[block]
   {\large\bfseries\color{PrimaryMid}}
   {\thesubsection}{0.8em}{}
-  [\vspace{1pt}\color{NeutralMid}\titlerule[0.6pt]]
+  [{\color{NeutralMid}\titlerule[0.6pt]}]
 
 \titleformat{\subsubsection}[runin]
   {\normalsize\bfseries\color{AccentTeal}}
@@ -180,7 +183,7 @@
 
 % ─── فونت‌ها (باید بعد از xepersian باشند) ────────────────────────
 \settextfont{Vazirmatn}
-\setlatinfont[Scale=0.95]{Linux Libertine O}
+\setlatintextfont[Scale=0.95]{Linux Libertine}
 \setdigitfont[Scale=0.95]{Vazirmatn}
 
 
