@@ -1,0 +1,207 @@
+% ============================================================
+%  بخش چهار: مفاهیم مجاور، دشمنان مفهومی، و مفاهیم تکمیلی
+% ============================================================
+\section{مفاهیم مجاور و زیست‌بوم مفهومی آزادی}
+\label{sec:concepts}
+
+آزادی هرگز تنها نمی‌ایستد. آن را باید در یک «زیست‌بوم مفهومی» دید: مجموعه‌ای از مفاهیم که یا آزادی را تکمیل می‌کنند، یا با آن در تنش‌اند، یا شرط لازم آن هستند.
+
+% ─────────────────────────────────────────────────────────────
+\subsection{نقشه‌ی زیست‌بوم مفهومی آزادی}
+\label{subsec:ecosystem}
+% ─────────────────────────────────────────────────────────────
+
+\begin{figure}[h!]
+\centering
+\caption{زیست‌بوم مفهومی آزادی: مفاهیم مکمل، رقیب، و پیش‌شرط}
+\label{fig:ecosystem}
+
+\begin{tikzpicture}[
+  every node/.style={font=\small},
+  core/.style={
+    circle, draw=PrimaryDeep, fill=BgCool,
+    line width=3pt, minimum size=2.2cm,
+    font=\bfseries\color{PrimaryDeep},
+    text centered,
+  },
+  comp/.style={
+    ellipse, draw=AccentTeal, fill=BgTeal,
+    line width=1.5pt, minimum height=0.9cm,
+    text centered, text width=2.2cm,
+    font=\small\bfseries\color{AccentTeal!70!black},
+  },
+  rival/.style={
+    ellipse, draw=AccentRed, fill=red!5,
+    line width=1.5pt, minimum height=0.9cm,
+    text centered, text width=2.2cm,
+    font=\small\bfseries\color{AccentRed},
+  },
+  prereq/.style={
+    ellipse, draw=AccentGold, fill=BgWarm,
+    line width=1.5pt, minimum height=0.9cm,
+    text centered, text width=2.2cm,
+    font=\small\bfseries\color{AccentAmber},
+  },
+  comp_arr/.style={-Stealth, thick, AccentTeal!70},
+  rival_arr/.style={Stealth-Stealth, thick, AccentRed!70, dashed},
+  prereq_arr/.style={Stealth-, thick, AccentGold},
+  lbl/.style={font=\tiny, fill=white, inner sep=1pt},
+]
+
+% مرکز
+\node[core] (F) at (0,0) {\rl{آزادی}}; % FIXED: \rl
+
+% مفاهیم مکمل (سبز/فیروزه — تکمیل‌کننده)
+\node[comp] (eq) at (0, 4.2) {\rl{برابری}\\% FIXED: گره چندخطی
+  \lr{\tiny Equality}};
+\node[comp] (just) at (3.5, 2.8) {\rl{عدالت}\\%
+  \lr{\tiny Justice}};
+\node[comp] (dig) at (4.5, 0) {\rl{کرامت}\\%
+  \lr{\tiny Dignity}};
+\node[comp] (rec) at (3.5, -2.8) {\rl{شناسایی}\\%
+  \lr{\tiny Recognition}};
+\node[comp] (comm) at (0, -4.2) {\rl{جامعه}\\%
+  \lr{\tiny Community}};
+
+% مفاهیم رقیب (قرمز — تنش‌زا)
+\node[rival] (sec) at (-3.5, 2.8) {\rl{امنیت}\\% FIXED: گره چندخطی
+  \lr{\tiny Security}};
+\node[rival] (auth) at (-4.5, 0) {\rl{اقتدار}\\%
+  \lr{\tiny Authority}};
+\node[rival] (ord) at (-3.5, -2.8) {\rl{نظم}\\%
+  \lr{\tiny Order}};
+
+% پیش‌شرط‌ها (طلایی)
+\node[prereq] (educ) at (-1.5, 4.8) {\rl{آموزش}\\% FIXED: گره چندخطی
+  \lr{\tiny Education}};
+\node[prereq] (trust) at (1.5, 4.8) {\rl{اعتماد}\\%
+  \lr{\tiny Trust}};
+\node[prereq] (mat) at (5, -1.5) {\rl{رفاه مادی}\\%
+  \lr{\tiny Material Well-being}};
+\node[prereq] (law) at (5, 1.5) {\rl{حاکمیت قانون}\\%
+  \lr{\tiny Rule of Law}};
+\node[prereq] (part) at (-5, 1.5) {\rl{مشارکت}\\%
+  \lr{\tiny Participation}};
+\node[prereq] (info) at (-5, -1.5) {\rl{اطلاعات}\\%
+  \lr{\tiny Information}};
+
+% فلش‌های مکمل
+\draw[comp_arr] (eq.south) -- node[lbl, right] {\rl{تکمیل}} (F.north); % FIXED: \rl
+\draw[comp_arr] (just.west) -- node[lbl, above] {\rl{تکمیل}} (F.north east);
+\draw[comp_arr] (dig.west) -- node[lbl, above] {} (F.east);
+\draw[comp_arr] (rec.west) -- node[lbl, below] {} (F.south east);
+\draw[comp_arr] (comm.north) -- node[lbl, right] {\rl{بستر}} (F.south);
+
+% فلش‌های رقیب
+\draw[rival_arr] (sec.east) -- node[lbl, above] {\rl{تنش}} (F.north west);
+\draw[rival_arr] (auth.east) -- node[lbl, above] {\rl{تعادل}} (F.west);
+\draw[rival_arr] (ord.east) -- node[lbl, below] {\rl{تنش}} (F.south west);
+
+% فلش‌های پیش‌شرط
+\draw[prereq_arr] (educ.south east) -- (F.north west);
+\draw[prereq_arr] (trust.south west) -- (F.north east);
+\draw[prereq_arr] (mat.north west) -- (F.east);
+\draw[prereq_arr] (law.west) -- (F.north east);
+\draw[prereq_arr] (part.east) -- (F.west);
+\draw[prereq_arr] (info.north east) -- (F.south west);
+
+% راهنما
+\begin{scope}[shift={(-6.5,-5)}]
+  \draw[comp_arr] (0,0.6) -- (1.2,0.6) node[right, font=\tiny] {\rl{مفاهیم مکمل}}; % FIXED: \rl
+  \draw[rival_arr] (0,0) -- (1.2,0) node[right, font=\tiny] {\rl{مفاهیم رقیب (تنش)}};
+  \draw[prereq_arr] (0,-0.6) -- (1.2,-0.6) node[right, font=\tiny] {\rl{پیش‌شرط‌ها}};
+\end{scope}
+
+\end{tikzpicture}
+\end{figure}
+
+% ─────────────────────────────────────────────────────────────
+\subsection{مفاهیم مجاور: تشریح تطبیقی}
+\label{subsec:adjacent}
+% ─────────────────────────────────────────────────────────────
+
+\begin{tcolorbox}[mybox, title={۱. برابری در کنار آزادی}]
+شاید بزرگ‌ترین تنش در فلسفه‌ی سیاسی، تنش آزادی–برابری است. \thinker{نوزیک} استدلال کرد که هر توزیع عادلانه برای تداوم نیازمند «نقض پیوسته‌ی آزادی» است.\footnote{\lr{Nozick, R. (1974). \textit{Anarchy, State, and Utopia}. New York: Basic Books, p. 163.}} در نقطه‌ی مقابل، \thinker{رالز} آزادی‌های اساسی را بر برابری‌های اقتصادی مقدم می‌داند اما معتقد است آزادی‌های واقعی نیازمند حداقلی از برابری اجتماعی است. % FIXED: \lr in footnote
+\end{tcolorbox}
+
+\begin{tcolorbox}[mybox, title={۲. عدالت و آزادی}]
+\thinker{جان رالز} استدلال کرد که «اصل آزادی» در اولویت اول قرار دارد—حتی قبل از عدالت اقتصادی. اما این دیدگاه پرسشی می‌گشاید: آیا آزادی بدون عدالت واقعی است؟ \thinker{آمارتیا سن} در نقد رالز نشان داد که عدالت بدون در نظر گرفتن «توانایی‌های واقعی» افراد انتزاعی می‌ماند.
+\end{tcolorbox}
+
+\begin{tcolorbox}[mybox, title={۳. امنیت در برابر آزادی}]
+این تنش در دوران پس از ۱۱ سپتامبر به‌ویژه شدت گرفت. \thinker{هابز} استدلال کرد امنیت شرط لازم آزادی است؛ اما چه مقدار امنیت توجیه‌گر کاهش آزادی است؟ \thinker{بنیامین فرانکلین} گفت کسی که آزادی را برای امنیت موقت می‌فروشد نه آزادی دارد نه امنیت.
+\end{tcolorbox}
+
+\begin{tcolorbox}[mybox, title={۴. کرامت و آزادی}]
+\concept{کرامت انسانی} مفهومی است که در حقوق بین‌الملل بشری عمیقاً با آزادی گره خورده است. اما تنشی وجود دارد: کرامت گاهی محدودیت‌هایی بر «آزادی بیان» ایجاد می‌کند—چنان‌که ممنوعیت «هتک حرمت» در برخی نظام‌های حقوقی. \thinker{جرمی والدرون} استدلال کرد این تنش اساساً حل‌پذیر نیست.
+\end{tcolorbox}
+
+\begin{tcolorbox}[mybox, title={۵. شناسایی و آزادی}]
+\thinker{چارلز تیلور} و \thinker{اکسل هونت} استدلال کردند که آزادی بدون شناسایی ناممکن است. انسانی که هویتش انکار می‌شود (از طریق تحقیر، بی‌دیدگی، یا طرد) نمی‌تواند آزاد باشد، حتی اگر هیچ «مانع قانونی» نداشته باشد. این نگاه پایه‌ی «سیاست‌های شناسایی» معاصر است.
+\end{tcolorbox}
+
+% ─────────────────────────────────────────────────────────────
+\subsection{دشمنان مفهومی: فهرست تفصیلی}
+\label{subsec:enemies_detail}
+% ─────────────────────────────────────────────────────────────
+
+\begin{table}[h!]
+\centering
+\caption{دشمنان مفهومی آزادی: تعریف، مکتب مقابله‌کننده، و نمونه‌ی تاریخی}
+\label{tab:enemies}
+\renewcommand{\arraystretch}{1.5}
+
+\begin{tabularx}{\textwidth}{|>{\bfseries\color{AccentRed}}p{2.3cm}
+  |>{\raggedright}X|>{\raggedright}X|>{\raggedright\arraybackslash}X|}
+
+\hline
+\rowcolor{AccentRed!80}
+\textcolor{white}{\textbf{دشمن مفهومی}} &
+\textcolor{white}{\textbf{تعریف}} &
+\textcolor{white}{\textbf{مکتب مقابله‌کننده}} &
+\textcolor{white}{\textbf{نمونه‌ی تاریخی}} \\
+\hline
+
+\rowcolor{red!5}
+بردگی & سلب مالکیت فرد بر خود & باستان، آبولیشنیسم & رُم، جنوب آمریکا \\
+\hline
+
+استبداد & اقتدار دلبخواهانه‌ی حاکم & جمهوری‌خواهی، لیبرالیسم & نازیسم، استالینیسم \\
+\hline
+
+\rowcolor{red!5}
+سلطه & قدرت بدون تداخل ضروری & پتیت، جمهوری‌خواهی & ارباب-رعیتی \\
+\hline
+
+اجبار & فشار ارادی بر اراده‌ی دیگری & لیبرالیسم کلاسیک & تهدید، باج‌گیری \\
+\hline
+
+\rowcolor{red!5}
+از خودبیگانگی & جدایی انسان از کارش و طبیعتش & مارکسیسم & کار صنعتی کارخانه‌ای \\
+\hline
+
+پدرسالاری & تصمیم‌گیری «برای خیر» دیگری & لیبرالیسم، اتونومیسم & دولت‌های پدرسالار \\
+\hline
+
+\rowcolor{red!5}
+محرومیت & فقدان قابلیت‌های اساسی & رویکرد قابلیت & فقر شدید، بی‌سوادی \\
+\hline
+
+نرمال‌سازی & قدرت گفتمان‌های طبیعی‌کننده & فوکو، پسامدرنیسم & جنسیت، دیوانگی \\
+\hline
+
+\rowcolor{red!5}
+بی‌شناسایی & انکار هویت و کرامت & تیلور، هونت & نژادپرستی، تحقیر سیستماتیک \\
+\hline
+
+استثمار & بهره‌کشی از کار دیگری & مارکسیسم، چپ & سرمایه‌داری انحصاری \\
+\hline
+
+\rowcolor{red!5}
+جهل اپیستمیک & سکوت دادن به دانش دیگری & فریکر & تجربه‌ی گروه‌های حاشیه‌ای \\
+\hline
+
+\end{tabularx}
+\end{table}
+
+\newpage

@@ -1,0 +1,298 @@
+% ============================================================
+%  بخش دو: امواج تحول — زمینه‌ها، نظریه‌ها، نتایج
+% ============================================================
+\section{امواج تحول: زمینه، نظریه، نتیجه، نقد}
+\label{sec:waves}
+
+\begin{tcolorbox}[wavebox, title={چارچوب تحلیل امواج}]
+هر موج شامل چهار عنصر است: (۱) \textbf{بستر تاریخی} که آن را ضروری کرد؛ (۲) \textbf{نظریه‌ی اصلی} که آن موج تولید کرد؛ (۳) \textbf{نتایج سیاسی و اجتماعی} آن؛ و (۴) \textbf{نقد و واکنش} موجی که پس از آن آمد.
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+% ─── نمودار امواج ─────────────────────────────────────────────
+\begin{figure}[h!]
+\centering
+\caption{نمودار امواج تحول در مفهوم آزادی}
+\label{fig:waves}
+
+\begin{tikzpicture}[xscale=1.8, yscale=1.2]
+% محورها
+\draw[-Stealth, thick] (-0.2,0) -- (7.5,0) node[right] {\rl{\small زمان}}; % FIXED: \rl
+\draw[-Stealth, thick] (0,-0.3) -- (0,4) node[above] {\rl{\small شدت بحث}}; % FIXED: \rl
+
+% امواج سینوسی با رنگ‌های مختلف
+\foreach \wave/\col/\label/\x in {
+  {sin(deg(x*pi/1)*1.2}/{EraAncient}/{موج ۱: باستان}/{0.5},
+  {sin(deg((x-1)*pi/1)*1.0}/{EraMedieval}/{موج ۲: قرون وسطی}/{1.5},
+  {sin(deg((x-2)*pi/1)*1.4}/{EraEarlyMod}/{موج ۳: مدرن اولیه}/{2.5},
+  {sin(deg((x-3)*pi/1)*1.6}/{EraModern}/{موج ۴: قرن ۱۹}/{3.5},
+  {sin(deg((x-4)*pi/1)*2.0}/{EraContemp}/{موج ۵: قرن ۲۰}/{4.5},
+  {sin(deg((x-5)*pi/1)*1.8}/{EraPostmod}/{موج ۶: معاصر}/{5.5}
+}{} % placeholder; actual drawing below
+
+% موج ۱
+\draw[thick, EraAncient, domain=0:1, samples=60]
+  plot (\x, {1.2*max(0,sin(deg(\x*3.14)))});
+\node[above, font=\tiny\bfseries, color=EraAncient] at (0.5, 1.3)
+  {\rl{موج ۱}}; % FIXED: \rl
+
+% موج ۲
+\draw[thick, EraMedieval, domain=1:2, samples=60]
+  plot (\x, {1.0*max(0,sin(deg((\x-1)*3.14)))});
+\node[above, font=\tiny\bfseries, color=EraMedieval] at (1.5, 1.1)
+  {\rl{موج ۲}}; % FIXED: \rl
+
+% موج ۳
+\draw[thick, EraEarlyMod, domain=2:3, samples=60]
+  plot (\x, {1.6*max(0,sin(deg((\x-2)*3.14)))});
+\node[above, font=\tiny\bfseries, color=EraEarlyMod] at (2.5, 1.7)
+  {\rl{موج ۳}}; % FIXED: \rl
+
+% موج ۴
+\draw[thick, EraModern, domain=3:4, samples=60]
+  plot (\x, {2.0*max(0,sin(deg((\x-3)*3.14)))});
+\node[above, font=\tiny\bfseries, color=EraModern] at (3.5, 2.1)
+  {\rl{موج ۴}}; % FIXED: \rl
+
+% موج ۵
+\draw[thick, EraContemp, domain=4:5, samples=60]
+  plot (\x, {2.8*max(0,sin(deg((\x-4)*3.14)))});
+\node[above, font=\tiny\bfseries, color=EraContemp] at (4.5, 2.9)
+  {\rl{موج ۵}}; % FIXED: \rl
+
+% موج ۶
+\draw[thick, EraPostmod, domain=5:6.5, samples=80]
+  plot (\x, {2.2*max(0,sin(deg((\x-5)*3.14/1.5)))});
+\node[above, font=\tiny\bfseries, color=EraPostmod] at (5.8, 2.3)
+  {\rl{موج ۶}}; % FIXED: \rl
+
+% برچسب‌های پایین
+\foreach \x/\lbl/\col in {
+  0.5/{\rl{باستان–رواقی}}/EraAncient,
+  1.5/{\rl{قرون وسطی}}/EraMedieval,
+  2.5/{\rl{مدرن اولیه}}/EraEarlyMod,
+  3.5/{\rl{ق. ۱۹}}/EraModern,
+  4.5/{\rl{ق. ۲۰}}/EraContemp,
+  5.8/{\rl{معاصر}}/EraPostmod
+}{
+  \node[below, rotate=40, font=\tiny, color=\col, anchor=north west]
+    at (\x, -0.1) {\lbl};
+}
+
+\end{tikzpicture}
+\end{figure}
+
+% ─────────────────────────────────────────────────────────────
+\subsection{موج اول: از بردگی تا شهروندی (دوران باستان)}
+\label{subsec:wave1}
+% ─────────────────────────────────────────────────────────────
+
+\begin{tcolorbox}[mybox, title={موج اول | دوران باستان | \lr{500 BC -- 500 AD}},
+  colframe=EraAncient, colback=EraAncient!5,
+  boxed title style={colback=EraAncient}]
+
+\begin{multicols}{2}
+
+\textbf{\color{EraAncient}بستر تاریخی:}
+
+پولیس یونانی بر دو پایه استوار بود: شهروندانِ آزاد، و بردگانی که آن آزادی را ممکن می‌کردند. آزادی (ἐλευθερία) نه یک حق عام، بلکه یک امتیاز \textit{مشروط به جنسیت، نژاد و ثروت} بود. جنگ‌های ایرانی–یونانی (۴۹۰–۴۷۹ ق.م.) آزادی را با هویت جمعی پیوند زد.
+
+\columnbreak
+
+\textbf{\color{EraAncient}نظریه‌ی اصلی:}
+
+ارسطو آزادی را در قالب \concept{بیوس پولیتیکوس} (زندگی سیاسی مشارکتی) تعریف کرد. رواقیون رادیکال‌ترین پاسخ را دادند: آزادی \textit{درون} انسان است، نه در دنیای بیرون—حتی برده هم می‌تواند آزاد باشد اگر اراده‌اش را از وابستگی به امور خارجی رها کند.
+
+\end{multicols}
+
+\vspace{0.3cm}
+\begin{tabular}{p{5cm}p{5cm}}
+\textcolor{AccentGreen}{\textbf{◀ نتایج:}} & \textcolor{AccentRed}{\textbf{◀ نقد:}} \\
+آزادی=شهروندی پایه‌ی دموکراسی شد & آزادی مبتنی بر بردگی؟ تناقض بنیادی \\
+رواقی‌گری به فردیت درونی اهمیت داد & نادیده گرفتن ساختارهای بیرونی \\
+اساس حقوق طبیعی بعدی & ناتوانی در اصلاح نظام بردگی \\
+\end{tabular}
+
+\end{tcolorbox}
+
+% ─────────────────────────────────────────────────────────────
+\subsection{موج دوم: اختیار، اراده و الهیات (قرون وسطی)}
+\label{subsec:wave2}
+% ─────────────────────────────────────────────────────────────
+
+\begin{tcolorbox}[mybox, title={موج دوم | قرون وسطی | \lr{500 -- 1400 AD}},
+  colframe=EraMedieval, colback=EraMedieval!5,
+  boxed title style={colback=EraMedieval}]
+
+\begin{multicols}{2}
+
+\textbf{\color{EraMedieval}بستر:}
+
+سقوط روم، تأسیس نهاد کلیسا، و جدال‌های الهیاتی بر سر گناه، فیض و اراده‌ی آزاد. سؤال اصلی: آیا انسانِ گناهکار اصلاً اراده‌ی آزاد دارد؟ این سؤال هم سیاسی بود، هم متافیزیکی.
+
+\columnbreak
+
+\textbf{\color{EraMedieval}نظریه:}
+
+\thinker{آگوستین}: اراده‌ی آزاد هست، اما گناه آن را کور کرده؛ آزادی واقعی=رهایی از گناه از طریق فیض الهی.\\
+\thinker{توماس آکویناس}: تلفیق ارسطو و مسیحیت؛ عقل طبیعی می‌تواند به آزادی واقعی رهنمون شود.\\
+\thinker{غزالی}: اراده‌ی انسان در چارچوب قضا و قدر.
+
+\end{multicols}
+
+\vspace{0.3cm}
+\begin{tabular}{p{5cm}p{5cm}}
+\textcolor{AccentGreen}{\textbf{◀ نتایج:}} & \textcolor{AccentRed}{\textbf{◀ نقد:}} \\
+تحلیل عمیق اراده و اختیار & تمرکز بر نجات فردی، نه آزادی سیاسی \\
+پایه‌ی حقوق طبیعی توماسی & مشروعیت‌بخشی به سلسله‌مراتب کلیسا \\
+گفتگوی اسلامی–مسیحی & تنش اراده‌ی آزاد/جبر حل‌نشده \\
+\end{tabular}
+
+\end{tcolorbox}
+
+% ─────────────────────────────────────────────────────────────
+\subsection{موج سوم: حق طبیعی، قرارداد، و انقلاب (مدرن اولیه)}
+\label{subsec:wave3}
+% ─────────────────────────────────────────────────────────────
+
+\begin{tcolorbox}[mybox, title={موج سوم | مدرن اولیه | \lr{1600 -- 1800}},
+  colframe=EraEarlyMod, colback=EraEarlyMod!5,
+  boxed title style={colback=EraEarlyMod}]
+
+\begin{multicols}{2}
+
+\textbf{\color{EraEarlyMod}بستر:}
+
+جنگ‌های مذهبی، رنسانس، اصلاح دینی، انقلاب‌های انگلیس (۱۶۴۲ و ۱۶۸۸) و فرانسه (۱۷۸۹). آدام اسمیت، نیوتن، و علم جدید. پرسش: چه چیزی حکومت را مشروع می‌کند؟
+
+\columnbreak
+
+\textbf{\color{EraEarlyMod}نظریه:}
+
+\thinker{هابز}: آزادی=عدم مانع فیزیکی؛ آزادی طبیعی در برابر لویاتان.\\
+\thinker{لاک}: آزادی=حق مالکیت و حق طبیعی؛ رضایت پایه‌ی مشروعیت.\\
+\thinker{روسو}: آزادی واقعی=اطاعت از اراده‌ی عمومی که خود انسان آن را ساخته.\\
+\thinker{کانت}: آزادی=خودقانون‌گذاری عقل؛ اخلاق بدون ترس.
+
+\end{multicols}
+
+\vspace{0.3cm}
+\begin{tabular}{p{5cm}p{5cm}}
+\textcolor{AccentGreen}{\textbf{◀ نتایج:}} & \textcolor{AccentRed}{\textbf{◀ نقد:}} \\
+اعلامیه‌های حقوق بشر & قراردادگرایی انتزاعی \\
+دموکراسی لیبرال & زنان، بردگان، مستعمرات خارج ماندند \\
+تفکیک قوا، سکولاریسم & تناقض روسو: اجبار به آزادی؟ \\
+\end{tabular}
+
+\end{tcolorbox}
+
+% ─────────────────────────────────────────────────────────────
+\subsection{موج چهارم: فردگرایی، رهایی، ایدئالیسم (قرن ۱۹)}
+\label{subsec:wave4}
+% ─────────────────────────────────────────────────────────────
+
+\begin{tcolorbox}[mybox, title={موج چهارم | قرن نوزدهم | \lr{1800 -- 1914}},
+  colframe=EraModern, colback=EraModern!5,
+  boxed title style={colback=EraModern}]
+
+\begin{multicols}{2}
+
+\textbf{\color{EraModern}بستر:}
+
+انقلاب صنعتی، شهرنشینی، پرولتاریا، ناسیونالیسم. رشد اقتصاد بازار. بحران‌های اجتماعی ناشی از سرمایه‌داری. رمانتیسم در برابر روشنگری. انقلاب‌های ۱۸۴۸.
+
+\columnbreak
+
+\textbf{\color{EraModern}نظریه:}
+
+\thinker{هگل}: آزادی=شناخت ضرورت + تحقق عقل در تاریخ + دولت اخلاقی.\\
+\thinker{میل}: آزادی=حق به حوزه‌ی خصوصی؛ «اصل آسیب».\\
+\thinker{مارکس}: آزادی واقعی=رهایی از کار بیگانه‌شده + نابودی طبقه.\\
+\thinker{نیچه}: آزادی=اراده‌ی قدرت؛ آزادی نه از قانون بلکه برای آفرینش.
+
+\end{multicols}
+
+\vspace{0.3cm}
+\begin{tabular}{p{5cm}p{5cm}}
+\textcolor{AccentGreen}{\textbf{◀ نتایج:}} & \textcolor{AccentRed}{\textbf{◀ نقد:}} \\
+احزاب کارگری و سوسیالیسم & مارکسیسم: آزادی پس از انقلاب \\
+حقوق مدنی، اتحادیه‌ها & هگل: دولت می‌تواند سرکوب کند \\
+فمینیسم موج اول & نیچه: الیتیسم؟ \\
+\end{tabular}
+
+\end{tcolorbox}
+
+% ─────────────────────────────────────────────────────────────
+\subsection{موج پنجم: آزادی منفی در برابر مثبت (قرن ۲۰)}
+\label{subsec:wave5}
+% ─────────────────────────────────────────────────────────────
+
+\begin{tcolorbox}[mybox, title={موج پنجم | قرن بیستم | \lr{1914 -- 1990}},
+  colframe=EraContemp, colback=EraContemp!5,
+  boxed title style={colback=EraContemp}]
+
+\begin{multicols}{2}
+
+\textbf{\color{EraContemp}بستر:}
+
+جنگ‌های جهانی، توتالیتاریسم (فاشیسم و استالینیسم)، جنگ سرد. نزاع لیبرالیسم و کمونیسم. استقلال کشورهای مستعمره. جنبش حقوق مدنی آمریکا.
+
+\columnbreak
+
+\textbf{\color{EraContemp}نظریه:}
+
+\thinker{برلین} (۱۹۵۸): آزادی منفی («آزادی از») در برابر مثبت («آزادی برای»).\\
+\thinker{هایک}: آزادی=نظم خودجوش؛ دولت رفاه=سرویلیتی.\\
+\thinker{آرنت}: آزادی=کنش در فضای عمومی، نه درون‌گرایی.\\
+\thinker{رالز}: آزادی=اولین اصل عدالت + توزیع عادلانه.
+
+\end{multicols}
+
+\vspace{0.3cm}
+\begin{tabular}{p{5cm}p{5cm}}
+\textcolor{AccentGreen}{\textbf{◀ نتایج:}} & \textcolor{AccentRed}{\textbf{◀ نقد:}} \\
+سند جهانی حقوق بشر ۱۹۴۸ & آزادی منفی از نابرابری چشم می‌پوشد \\
+دولت رفاه سوسیال‌دموکرات & تیلور: برلین ناقص است \\
+بازار آزاد نئولیبرال & پتیت: سلطه‌ی غیرتداخلگر وجود دارد \\
+\end{tabular}
+
+\end{tcolorbox}
+
+% ─────────────────────────────────────────────────────────────
+\subsection{موج ششم: قابلیت، شناسایی، و رهایی‌بخشی (معاصر)}
+\label{subsec:wave6}
+% ─────────────────────────────────────────────────────────────
+
+\begin{tcolorbox}[mybox, title={موج ششم | معاصر | \lr{1990 -- present}},
+  colframe=EraPostmod, colback=EraPostmod!5,
+  boxed title style={colback=EraPostmod}]
+
+\begin{multicols}{2}
+
+\textbf{\color{EraPostmod}بستر:}
+
+پایان جنگ سرد، جهانی‌شدن، انفجار اطلاعات، بحران اقلیمی، جنبش‌های هویتی (\lr{MeToo, BLM})، دموکراسی‌های رو به تنزل. فناوری دیجیتال و نظارت.
+
+\columnbreak
+
+\textbf{\color{EraPostmod}نظریه:}
+
+\thinker{سن/نوسبام}: آزادی=داشتن قابلیت‌های اساسی برای زندگی شایسته.\\
+\thinker{پتیت}: آزادی=عدم سلطه؛ حتی سلطه‌ای که تداخل نکند.\\
+\thinker{تیلور}: آزادی=شناسایی و اعتراف به هویت.\\
+\thinker{فوکو/باتلر}: آزادی=مقاومت در برابر گفتمان‌های نرمال‌ساز.
+
+\end{multicols}
+
+\vspace{0.3cm}
+\begin{tabular}{p{5cm}p{5cm}}
+\textcolor{AccentGreen}{\textbf{◀ نتایج:}} & \textcolor{AccentRed}{\textbf{◀ نقد:}} \\
+رویکرد قابلیت در سیاست توسعه & خطر نسبیت‌گرایی فرهنگی \\
+سیاست‌های شناسایی & تنش قابلیت/کارایی اقتصادی \\
+آزادی دیجیتال و حریم خصوصی & چه کسی قابلیت‌ها را تعریف می‌کند؟ \\
+\end{tabular}
+
+\end{tcolorbox}
+
+\newpage

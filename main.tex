@@ -1,0 +1,213 @@
+% ============================================================
+%  آزادی به مثابه... | مهدی سالم | ۲۲ فوریه ۲۰۲۶
+%  Freedom as... | Mahdi Salem | February 22, 2026
+% ============================================================
+\documentclass[12pt,a4paper]{article}
+
+% ─── بسته‌های پایه ───────────────────────────────────────────
+\usepackage{fontspec}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{colortbl}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{pgf-pie}
+\usepackage{mdframed}
+\usepackage{tcolorbox}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{multicol}
+\usepackage{setspace}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{footnote}
+\usepackage{endnotes}
+\usepackage{etoolbox}
+\usepackage{calc}
+\usepackage{varwidth}
+
+% ─── تنظیمات TikZ ─────────────────────────────────────────────
+\usetikzlibrary{
+  arrows, arrows.meta, positioning, shapes, shapes.geometric,
+  shapes.multipart, shadows, decorations, decorations.pathreplacing,
+  decorations.markings, patterns, backgrounds, calc, fit,
+  mindmap, trees, timeline, matrix, chains, scopes,
+  fadings, through, plotmarks, intersections, bbox
+}
+\pgfplotsset{compat=1.18}
+\tcbuselibrary{skins, breakable, theorems, listings}
+
+% ─── صفحه‌آرایی ───────────────────────────────────────────────
+\geometry{
+  a4paper,
+  top=2.8cm, bottom=2.8cm,
+  right=3.5cm, left=3cm,
+  headheight=1.5cm,
+  headsep=0.5cm,
+  footskip=1.2cm
+}
+
+% فونت‌ها بعد از xepersian تعریف می‌شوند
+
+% ─── پالت رنگی ────────────────────────────────────────────────
+\definecolor{PrimaryDeep}{HTML}{1A237E}    % آبی عمیق
+\definecolor{PrimaryMid}{HTML}{283593}     % آبی متوسط
+\definecolor{PrimaryLight}{HTML}{3949AB}   % آبی روشن
+\definecolor{AccentGold}{HTML}{F9A825}     % طلایی
+\definecolor{AccentAmber}{HTML}{FF8F00}    % کهربایی
+\definecolor{AccentTeal}{HTML}{00695C}     % فیروزه‌ای
+\definecolor{AccentRed}{HTML}{B71C1C}      % قرمز عمیق
+\definecolor{AccentGreen}{HTML}{1B5E20}    % سبز عمیق
+\definecolor{AccentPurple}{HTML}{4A148C}   % بنفش
+\definecolor{NeutralLight}{HTML}{ECEFF1}   % خاکستری بسیار روشن
+\definecolor{NeutralMid}{HTML}{B0BEC5}     % خاکستری روشن
+\definecolor{NeutralDark}{HTML}{455A64}    % خاکستری تیره
+\definecolor{TextMain}{HTML}{212121}       % متن اصلی
+\definecolor{TextSecond}{HTML}{424242}     % متن ثانوی
+\definecolor{BgWarm}{HTML}{FFF8E1}         % پس‌زمینه گرم
+\definecolor{BgCool}{HTML}{E8EAF6}         % پس‌زمینه سرد
+\definecolor{BgTeal}{HTML}{E0F2F1}         % پس‌زمینه فیروزه
+
+% ─── رنگ‌های دوره‌ها ───────────────────────────────────────────
+\definecolor{EraAncient}{HTML}{4E342E}     % باستان: قهوه‌ای
+\definecolor{EraMedieval}{HTML}{37474F}    % قرون وسطی: خاکستری تیره
+\definecolor{EraEarlyMod}{HTML}{1565C0}   % مدرن اولیه: آبی
+\definecolor{EraModern}{HTML}{2E7D32}      % مدرن: سبز
+\definecolor{EraContemp}{HTML}{6A1B9A}     % معاصر: بنفش
+\definecolor{EraPostmod}{HTML}{AD1457}     % پسامدرن: صورتی تیره
+
+% ─── جعبه‌های محتوایی ─────────────────────────────────────────
+\tcbset{
+  mybox/.style={
+    enhanced, breakable,
+    colback=BgCool, colframe=PrimaryMid,
+    fonttitle=\bfseries\large,
+    attach boxed title to top right={yshift=-2mm, xshift=-3mm},
+    boxed title style={colback=PrimaryMid, colframe=PrimaryDeep},
+    top=4mm, bottom=4mm,
+  },
+  defbox/.style={
+    enhanced, breakable,
+    colback=BgWarm, colframe=AccentGold,
+    fonttitle=\bfseries,
+    left=4mm, right=4mm,
+    borderline west={3pt}{0pt}{AccentAmber},
+    sharp corners,
+  },
+  wavebox/.style={
+    enhanced, breakable,
+    colback=BgTeal, colframe=AccentTeal,
+    fonttitle=\bfseries,
+    rounded corners,
+    drop shadow,
+  },
+  quotebox/.style={
+    enhanced, breakable,
+    colback=NeutralLight, colframe=NeutralDark,
+    fontupper=\itshape,
+    left=8mm,
+    borderline west={4pt}{0pt}{NeutralMid},
+    sharp corners=south,
+  },
+  enemybox/.style={
+    enhanced,
+    colback=red!5, colframe=AccentRed,
+    fonttitle=\bfseries,
+    borderline west={3pt}{0pt}{AccentRed},
+  },
+}
+
+% ─── سربرگ و پابرگ ────────────────────────────────────────────
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0.6pt}
+\renewcommand{\footrulewidth}{0.3pt}
+\fancyhead[R]{\small\color{PrimaryMid}\rightmark}
+\fancyhead[L]{\small\color{NeutralDark}آزادی به مثابه... \textbar{} مهدی سالم}
+\fancyfoot[C]{\small\thepage}
+\fancyfoot[R]{\small\color{NeutralDark}\leftmark}
+
+% ─── عنوان‌بندی بخش‌ها ────────────────────────────────────────
+\titleformat{\section}[block]
+  {\Large\bfseries\color{PrimaryDeep}}
+  {\thesection}{1em}{}
+  [\vspace{2pt}\color{AccentGold}\titlerule[1.5pt]]
+
+\titleformat{\subsection}[block]
+  {\large\bfseries\color{PrimaryMid}}
+  {\thesubsection}{0.8em}{}
+  [\vspace{1pt}\color{NeutralMid}\titlerule[0.6pt]]
+
+\titleformat{\subsubsection}[runin]
+  {\normalsize\bfseries\color{AccentTeal}}
+  {\thesubsubsection}{0.6em}{}[\ —\ ]
+
+% ─── فاصله‌گذاری ──────────────────────────────────────────────
+\titlespacing*{\section}{0pt}{18pt}{10pt}
+\titlespacing*{\subsection}{0pt}{14pt}{6pt}
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.4em}
+\onehalfspacing
+
+% ─── hyperref ─────────────────────────────────────────────────
+\hypersetup{
+  colorlinks  = true,
+  linkcolor   = PrimaryMid,
+  citecolor   = AccentTeal,
+  urlcolor    = AccentAmber,
+  pdftitle    = {آزادی به مثابه...},
+  pdfauthor   = {مهدی سالم},
+  pdfkeywords = {آزادی، فلسفه‌ی سیاسی، لیبرالیسم، جمهوری‌خواهی، فرانکفورت},
+  pdfsubject  = {فلسفه‌ی سیاسی تطبیقی},
+  bookmarks   = true,
+  pdfpagemode = UseOutlines,
+  pdfencoding = unicode, % FIXED: برای نمایش درست بوکمارک‌های فارسی
+}
+
+\usepackage{xepersian} % FIXED: xepersian باید آخرین بسته باشد
+
+% ─── فونت‌ها (باید بعد از xepersian باشند) ────────────────────────
+\settextfont{Vazirmatn}
+\setlatinfont[Scale=0.95]{Linux Libertine O}
+\setdigitfont[Scale=0.95]{Vazirmatn}
+
+
+% ─── دستورات کمکی ─────────────────────────────────────────────
+\newcommand{\concept}[1]{\textbf{\color{PrimaryMid}#1}}
+\newcommand{\thinker}[1]{\textit{\color{AccentTeal}#1}}
+\newcommand{\era}[1]{\textbf{\color{AccentAmber}#1}}
+\newcommand{\enemy}[1]{\textbf{\color{AccentRed}#1}}
+\newcommand{\lat}[1]{\lr{#1}}
+\newcommand{\src}[1]{\textsuperscript{\scriptsize\color{NeutralDark}[#1]}}
+
+% ─── فرمت پانوشت ──────────────────────────────────────────────
+\renewcommand{\thefootnote}{\arabic{footnote}}
+
+% ─── ═══════════════════════════════════════════════════════════
+\begin{document}
+% \settextfont[Scale=1]{Vazirmatn} % حذف شد چون در بالا تعریف شده
+
+% بخش‌ها
+\input{sections/sec0_cover}
+\input{sections/sec1_schematic}
+\input{sections/sec2_waves}
+\input{sections/sec3_main}
+\input{sections/sec4_concepts}
+\input{sections/sec5_readings}
+\input{sections/appendix_a}
+\input{sections/appendix_b}
+\input{sections/bibliography}
+
+\end{document}

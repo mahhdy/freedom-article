@@ -1,0 +1,477 @@
+% ============================================================
+%  بخش یک: نگاه شماتیک و نموداری به جغرافیای مفهومی آزادی
+% ============================================================
+\section{جغرافیای مفهومی آزادی: نگاهی شماتیک}
+\label{sec:schematic}
+
+\begin{tcolorbox}[wavebox, title={درباره‌ی این بخش}]
+در این بخش، مفهوم آزادی را نه با کلمات، بلکه با نقشه‌ها، خط‌های زمانی، و نمودارهای تعاملی می‌کاویم. هدف: پیش از هر تحلیل عمیق، یک تصویر کلی و شماتیک از جغرافیای این مفهوم داشته باشیم.
+\end{tcolorbox}
+
+% ─────────────────────────────────────────────────────────────
+\subsection{خط زمانی: ۲۵۰۰ سال تعبیرسازی آزادی}
+\label{subsec:timeline}
+% ─────────────────────────────────────────────────────────────
+
+\begin{figure}[h!]
+\centering
+\caption{خط زمانی تعبیرسازی‌های اصلی از مفهوم آزادی}
+\label{fig:timeline}
+
+\begin{tikzpicture}[
+  xscale=0.95,
+  every node/.style={font=\small},
+  era/.style={
+    rectangle, rounded corners=3pt,
+    text centered, text width=2.2cm,
+    minimum height=0.7cm,
+    font=\footnotesize\bfseries,
+    text=white,
+  },
+  event/.style={
+    rectangle, rounded corners=2pt,
+    text centered, text width=3cm,
+    minimum height=0.6cm,
+    font=\footnotesize,
+    draw, thick,
+    fill=white,
+  },
+  arrow/.style={-Stealth, thick},
+]
+
+% ─── خط اصلی ─────────────────────────────────────────────────
+  (-0.5,0) -- (16.5,0) node[right,font=\small\bfseries,color=PrimaryDeep] {\rl{زمان}}; % FIXED: متن فارسی در TikZ
+
+% ─── نشانگرهای زمانی ─────────────────────────────────────────
+\foreach \x/\label in {
+  0/{\lr{500 BC}},
+  3/{\lr{500 AD}},
+  6/{\lr{1300}},
+  9/{\lr{1650}},
+  12/{\lr{1850}},
+  15/{\lr{2000}}
+}{
+  \draw[thick, PrimaryDeep] (\x,-0.15) -- (\x,0.15);
+  \node[below, font=\scriptsize\color{NeutralDark}] at (\x,-0.2) {\label};
+}
+
+% ─── دوره‌ی باستان ────────────────────────────────────────────
+\fill[EraAncient] (-0.4, 0.5) rectangle (3.2, 1.0);
+\node[era, text width=3.6cm, fill=EraAncient] at (1.4,0.75) {\rl{دوران باستان}}; % FIXED: \rl
+
+\node[event, fill=EraAncient!10, draw=EraAncient, text width=2.8cm]
+  at (0.5, 2.0) {\rl{\textbf{پولیس یونانی}}\\% FIXED: گره چندخطی
+  \rl{\tiny ارسطو: آزادی=شهروندی}%
+  };
+\draw[arrow, EraAncient] (0.5, 1.6) -- (0.5, 1.05);
+
+\node[event, fill=EraAncient!10, draw=EraAncient, text width=2.8cm]
+  at (2.2, 3.2) {\rl{\textbf{رواقیون}}\\% FIXED: گره چندخطی
+  \rl{\tiny آزادی=خویشتن‌داری درونی}%
+  };
+\draw[arrow, EraAncient] (2.2, 2.8) -- (2.2, 1.05);
+
+% ─── قرون وسطی ────────────────────────────────────────────────
+\fill[EraMedieval] (3.2, 0.5) rectangle (6.2, 1.0);
+\node[era, text width=3.0cm, fill=EraMedieval] at (4.7,0.75) {\rl{قرون وسطی}}; % FIXED: \rl
+
+\node[event, fill=EraMedieval!10, draw=EraMedieval, text width=2.8cm]
+  at (3.8, 2.0) {\rl{\textbf{آگوستین}}\\% FIXED: گره چندخطی
+  \rl{\tiny آزادی=اراده‌ی آزاد الهی}%
+  };
+\draw[arrow, EraMedieval] (3.8, 1.6) -- (3.8, 1.05);
+
+\node[event, fill=EraMedieval!10, draw=EraMedieval, text width=2.8cm]
+  at (5.5, 3.2) {\rl{\textbf{غزالی / ابن‌عربی}}\\% FIXED: گره چندخطی
+  \rl{\tiny آزادی=بندگی خدا}%
+  };
+\draw[arrow, EraMedieval] (5.5, 2.8) -- (5.5, 1.05);
+
+% ─── مدرن اولیه ───────────────────────────────────────────────
+\fill[EraEarlyMod] (6.2, 0.5) rectangle (9.2, 1.0);
+\node[era, text width=3.0cm, fill=EraEarlyMod] at (7.7,0.75) {\rl{مدرن اولیه}}; % FIXED: \rl
+
+\node[event, fill=EraEarlyMod!10, draw=EraEarlyMod, text width=2.8cm]
+  at (7.0, 2.0) {\rl{\textbf{هابز / لاک}}\\% FIXED: گره چندخطی
+  \rl{\tiny آزادی=حق طبیعی، قرارداد}%
+  };
+\draw[arrow, EraEarlyMod] (7.0, 1.6) -- (7.0, 1.05);
+
+\node[event, fill=EraEarlyMod!10, draw=EraEarlyMod, text width=2.8cm]
+  at (9.0, 3.2) {\rl{\textbf{کانت}}\\% FIXED: گره چندخطی
+  \rl{\tiny آزادی=خودقانون‌گذاری عقل}%
+  };
+\draw[arrow, EraEarlyMod] (9.0, 2.8) -- (9.0, 1.05);
+
+% ─── مدرن قرن ۱۹ ─────────────────────────────────────────────
+\fill[EraModern] (9.2, 0.5) rectangle (12.2, 1.0);
+\node[era, text width=3.0cm, fill=EraModern] at (10.7,0.75) {\rl{قرن نوزدهم}}; % FIXED: \rl
+
+\node[event, fill=EraModern!10, draw=EraModern, text width=2.8cm]
+  at (10.2, 2.0) {\rl{\textbf{میل}}\\% FIXED: گره چندخطی
+  \rl{\tiny آزادی=فردیت، عدم مداخله}%
+  };
+\draw[arrow, EraModern] (10.2, 1.6) -- (10.2, 1.05);
+
+\node[event, fill=EraModern!10, draw=EraModern, text width=2.8cm]
+  at (12.0, 3.2) {\rl{\textbf{مارکس / هگل}}\\% FIXED: گره چندخطی
+  \rl{\tiny آزادی=رهایی، خودشکوفایی}%
+  };
+\draw[arrow, EraModern] (12.0, 2.8) -- (12.0, 1.05);
+
+% ─── معاصر ────────────────────────────────────────────────────
+\fill[EraContemp] (12.2, 0.5) rectangle (15.5, 1.0);
+\node[era, text width=3.3cm, fill=EraContemp] at (13.85,0.75) {\rl{معاصر و پسامدرن}}; % FIXED: \rl
+
+\node[event, fill=EraContemp!10, draw=EraContemp, text width=2.8cm]
+  at (13.5, 2.0) {\rl{\textbf{برلین}}\\% FIXED: گره چندخطی
+  \rl{\tiny آزادی منفی/مثبت ۱۹۵۸}%
+  };
+\draw[arrow, EraContemp] (13.5, 1.6) -- (13.5, 1.05);
+
+\node[event, fill=EraContemp!10, draw=EraContemp, text width=2.8cm]
+  at (15.2, 3.2) {\rl{\textbf{پتیت / سن}}\\% FIXED: گره چندخطی
+  \rl{\tiny عدم‌سلطه، قابلیت}%
+  };
+\draw[arrow, EraContemp] (15.2, 2.8) -- (15.2, 1.05);
+
+% ─── محور پایین: دشمنان مفهومی ───────────────────────────────
+\foreach \x/\enemy in {
+  0.5/{بردگی},
+  2.2/{خودکامگی},
+  4.0/{گناه},
+  5.6/{استبداد حاکم},
+  7.2/{هرج‌ومرج},
+  9.0/{جزم‌اندیشی},
+  10.5/{اختناق},
+  12.2/{از خودبیگانگی},
+  13.8/{سلطه},
+  15.2/{محرومیت}
+}{
+  \node[below, font=\tiny, color=AccentRed, rotate=30, anchor=north west]
+    at (\x,-0.5) {\rl{\enemy}}; % FIXED: \rl
+  \draw[thin, AccentRed!50, dashed] (\x,-0.15) -- (\x,-0.5);
+}
+
+\node[left, font=\tiny\bfseries, color=AccentRed] at (-0.5,-0.5) {\rl{دشمن:}}; % FIXED: \rl
+
+\end{tikzpicture}
+\end{figure}
+
+\vspace{0.5cm}
+
+% ─────────────────────────────────────────────────────────────
+\subsection{نقشه‌ی مکتبی: چه کسانی با چه کسانی گفتگو داشتند؟}
+\label{subsec:schools}
+% ─────────────────────────────────────────────────────────────
+
+\begin{figure}[h!]
+\centering
+\caption{نقشه‌ی مکتبی و گفتگوهای میان‌مکتبی در فلسفه‌ی آزادی}
+\label{fig:schoolmap}
+
+\begin{tikzpicture}[
+  node distance=3.2cm,
+  school/.style={
+    ellipse, draw, thick,
+    text centered, text width=2.4cm,
+    minimum height=1.5cm,
+    font=\small\bfseries,
+  },
+  agree/.style={-Stealth, thick, AccentTeal!80, double},
+  disagree/.style={-Stealth, thick, AccentRed!80, dashed},
+  influence/.style={-Stealth, thick, AccentGold, dotted, line width=1.5pt},
+  lbl/.style={font=\tiny, fill=white, inner sep=1pt},
+]
+
+% ─── مراکز مکاتب ──────────────────────────────────────────────
+\node[school, fill=EraEarlyMod!20, draw=EraEarlyMod] (lib)
+  at (0,0) {\rl{لیبرالیسم}\\% FIXED: گره چندخطی
+  \rl{کلاسیک}%
+  };
+
+\node[school, fill=EraModern!20, draw=EraModern] (rep)
+  at (4.5,0) {\rl{جمهوری‌خواهی}\\% FIXED: گره چندخطی
+  \rl{مدنی}%
+  };
+
+\node[school, fill=EraContemp!20, draw=EraContemp] (marx)
+  at (-4.5,-3) {\rl{مارکسیسم}\\% FIXED: گره چندخطی
+  \rl{و چپ}%
+  };
+
+\node[school, fill=AccentAmber!20, draw=AccentAmber] (comm)
+  at (0,-4.5) {\rl{جامعه‌گرایی}\\% FIXED: گره چندخطی
+  \rl{و تیلوریسم}%
+  };
+
+\node[school, fill=AccentGold!20, draw=AccentGold!80] (fem)
+  at (4.5,-3) {\rl{فمینیسم}\\% FIXED: گره چندخطی
+  \rl{و پسااستعمار}%
+  };
+
+\node[school, fill=AccentPurple!15, draw=AccentPurple] (exist)
+  at (-4.5,0) {\rl{اگزیستانسیالیسم}}; % FIXED: \rl
+
+\node[school, fill=AccentRed!15, draw=AccentRed] (libert)
+  at (0,4) {\rl{لیبرتاریانیسم}\\% FIXED: گره چندخطی
+  \rl{(هایک)}%
+  };
+
+\node[school, fill=AccentTeal!20, draw=AccentTeal] (cap)
+  at (4.5,4) {\rl{رویکرد قابلیت}\\% FIXED: گره چندخطی
+  \rl{(سن–نوسبام)}%
+  };
+
+\node[school, fill=NeutralMid!30, draw=NeutralDark] (isl)
+  at (-4.5,3) {\rl{سنت اسلامی}\\% FIXED: گره چندخطی
+  \rl{–ایرانی}%
+  };
+
+% ─── روابط ────────────────────────────────────────────────────
+% لیبرالیسم ↔ جمهوری‌خواهی: رقابت
+\draw[disagree] (lib.east) to[bend left=15]
+  node[lbl, above] {\rl{رقابت بر سر}\\% FIXED: \rl
+  \rl{سلطه‌پذیری}%
+  } (rep.west);
+\draw[disagree] (rep.west) to[bend left=15] (lib.east);
+
+% لیبرالیسم → لیبرتاریانیسم: تأثیر
+\draw[influence] (lib.north) to[bend right=20]
+  node[lbl, right] {\rl{پایه‌گذاری}} (libert.south); % FIXED: \rl
+
+% لیبرالیسم ↔ مارکسیسم: تقابل اصلی
+\draw[disagree] (lib.west) to[bend right=20]
+  node[lbl, below left] {\rl{فرد \lr{vs} طبقه}} (marx.north); % FIXED: \rl + \lr
+\draw[disagree] (marx.north) to[bend right=20] (lib.west);
+
+% جامعه‌گرایی ↔ لیبرالیسم: انتقاد
+\draw[disagree] (comm.north) to[bend left=10]
+  node[lbl, left] {\rl{انتقاد از}\\% FIXED: \rl
+  \rl{اتمیسم}%
+  } (lib.south);
+
+% فمینیسم ↔ لیبرالیسم: مطالبه
+\draw[influence] (fem.north) to[bend right=15]
+  node[lbl, right] {\rl{بسط حقوق}} (rep.south); % FIXED: \rl
+
+% اگزیستانسیالیسم → جامعه‌گرایی: تأثیر
+\draw[influence] (exist.south) to[bend right=10]
+  node[lbl, left] {\rl{فردیت}} (marx.north west); % FIXED: \rl
+
+% قابلیت ← لیبرالیسم
+\draw[influence] (lib.north east) to[bend left=10]
+  node[lbl, right] {\rl{بسط}} (cap.south west); % FIXED: \rl
+
+% سنت اسلامی ↔ لیبرالیسم
+\draw[disagree] (isl.east) to[bend right=10]
+  node[lbl, above] {\rl{دیالوگ}\\% FIXED: \rl
+  \rl{تمدنی}%
+  } (lib.north west);
+
+% ─── راهنما ───────────────────────────────────────────────────
+\begin{scope}[shift={(-5,-5.5)}]
+  \draw[agree] (0,0.4) -- (1,0.4) node[right, font=\tiny] {\rl{توافق/تکمیل}}; % FIXED: \rl
+  \draw[disagree] (0,0) -- (1,0) node[right, font=\tiny] {\rl{تقابل/رقابت}}; % FIXED: \rl
+  \draw[influence] (0,-0.4) -- (1,-0.4) node[right, font=\tiny] {\rl{تأثیر/بسط}}; % FIXED: \rl
+\end{scope}
+
+\end{tikzpicture}
+\end{figure}
+
+% ─────────────────────────────────────────────────────────────
+\subsection{ماتریس مقایسه‌ای: متفکران و ابعاد آزادی}
+\label{subsec:matrix}
+% ─────────────────────────────────────────────────────────────
+
+\begin{tcolorbox}[defbox, title={راهنمای ماتریس}]
+\small هر خانه نشان می‌دهد که آیا آن متفکر آن بُعد از آزادی را تأیید (●)، رد (✕) یا تا حدی قبول (◐) می‌کند.
+\end{tcolorbox}
+
+\vspace{0.4cm}
+
+\begin{table}[h!]
+\centering
+\caption{ماتریس تطبیقی متفکران و ابعاد آزادی}
+\label{tab:matrix}
+\small
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.4}
+
+\begin{tabularx}{\textwidth}{|>{\bfseries\color{PrimaryMid}}p{2.2cm}
+  |>{\centering}X|>{\centering}X|>{\centering}X|>{\centering}X
+  |>{\centering}X|>{\centering}X|>{\centering}X|>{\centering\arraybackslash}X|}
+
+\hline
+\rowcolor{PrimaryDeep}
+\textcolor{white}{\textbf{متفکر}} &
+\textcolor{white}{\footnotesize\textbf{عدم مداخله}} &
+\textcolor{white}{\footnotesize\textbf{خودفرمانی}} &
+\textcolor{white}{\footnotesize\textbf{عدم سلطه}} &
+\textcolor{white}{\footnotesize\textbf{قابلیت}} &
+\textcolor{white}{\footnotesize\textbf{مشارکت}} &
+\textcolor{white}{\footnotesize\textbf{رهایی}} &
+\textcolor{white}{\footnotesize\textbf{شناسایی}} &
+\textcolor{white}{\footnotesize\textbf{طبیعت}}\\
+\hline
+
+\rowcolor{EraEarlyMod!15}
+\lr{Hobbes} & ●●● & ✕ & ◐ & ✕ & ✕ & ✕ & ✕ & ●\\
+\hline
+\rowcolor{EraEarlyMod!10}
+\lr{Locke} & ●●● & ● & ◐ & ✕ & ● & ✕ & ✕ & ●●\\
+\hline
+\rowcolor{EraEarlyMod!15}
+\lr{Rousseau} & ◐ & ●●● & ● & ✕ & ●●● & ◐ & ✕ & ●\\
+\hline
+\rowcolor{EraEarlyMod!10}
+\lr{Kant} & ● & ●●● & ● & ✕ & ● & ✕ & ✕ & ✕\\
+\hline
+\rowcolor{EraModern!15}
+\lr{Mill} & ●●● & ●● & ◐ & ◐ & ● & ✕ & ✕ & ✕\\
+\hline
+\rowcolor{EraModern!10}
+\lr{Marx} & ✕ & ● & ●● & ◐ & ◐ & ●●● & ✕ & ✕\\
+\hline
+\rowcolor{EraModern!15}
+\lr{Hegel} & ◐ & ●●● & ● & ✕ & ●● & ◐ & ●● & ✕\\
+\hline
+\rowcolor{EraContemp!15}
+\lr{Berlin} & ●●● & ●● & ◐ & ✕ & ◐ & ✕ & ✕ & ✕\\
+\hline
+\rowcolor{EraContemp!10}
+\lr{Rawls} & ●● & ●● & ● & ● & ● & ✕ & ● & ✕\\
+\hline
+\rowcolor{EraContemp!15}
+\lr{Hayek} & ●●● & ◐ & ✕ & ✕ & ✕ & ✕ & ✕ & ●\\
+\hline
+\rowcolor{EraContemp!10}
+\lr{Pettit} & ● & ● & ●●● & ✕ & ●● & ✕ & ◐ & ✕\\
+\hline
+\rowcolor{EraContemp!15}
+\lr{Sen} & ● & ● & ●● & ●●● & ● & ● & ● & ✕\\
+\hline
+\rowcolor{EraContemp!10}
+\lr{Arendt} & ● & ◐ & ●● & ✕ & ●●● & ✕ & ● & ✕\\
+\hline
+\rowcolor{EraPostmod!15}
+\lr{Foucault} & ◐ & ◐ & ●● & ✕ & ✕ & ●●● & ● & ✕\\
+\hline
+\rowcolor{EraPostmod!10}
+\lr{Butler} & ◐ & ◐ & ●● & ✕ & ◐ & ●●● & ●● & ✕\\
+\hline
+\rowcolor{AccentGold!15}
+\lr{Taylor} & ● & ●●● & ● & ◐ & ●● & ◐ & ●●● & ✕\\
+\hline
+
+\multicolumn{9}{l}{\tiny ●●● تأکید اصلی \quad ●● تأکید قابل‌توجه \quad ● پذیرش \quad ◐ دوسویه/مشروط \quad ✕ رد یا غیبت}
+\end{tabularx}
+\end{table}
+
+% ─────────────────────────────────────────────────────────────
+\subsection{نقشه‌ی دشمنان مفهومی آزادی}
+\label{subsec:enemies}
+% ─────────────────────────────────────────────────────────────
+
+\begin{tcolorbox}[enemybox, title={\color{AccentRed}مفهوم «دشمن مفهومی»}]
+هر تعریف از آزادی، همزمان یک یا چند «دشمن مفهومی» می‌سازد: چیزی که نقیض یا ضد آزادی است. این دشمنان خود گویای بیشترین چیز درباره‌ی هر نظریه هستند.
+\end{tcolorbox}
+
+\vspace{0.5cm}
+
+\begin{figure}[h!]
+\centering
+\caption{نقشه‌ی دشمنان مفهومی آزادی — هر مکتب با چه چیزی مقابله می‌کند؟}
+\label{fig:enemies}
+
+\begin{tikzpicture}[
+  freedom/.style={
+    circle, draw=PrimaryDeep, fill=BgCool,
+    line width=2.5pt, font=\large\bfseries\color{PrimaryDeep},
+    minimum size=2cm,
+  },
+  enemy/.style={
+    rectangle, rounded corners=4pt, draw, thick,
+    text centered, text width=2.3cm,
+    minimum height=0.8cm,
+    font=\small\bfseries,
+  },
+  arrow/.style={Stealth-Stealth, thick, AccentRed!70},
+  lbl/.style={font=\tiny, fill=white, inner sep=2pt, rounded corners},
+]
+
+% مرکز
+\node[freedom] (F) at (0,0) {\rl{آزادی}}; % FIXED: \rl
+
+% دشمنان (اطراف)
+\node[enemy, fill=EraAncient!20, draw=EraAncient, text=EraAncient]
+  (slavery) at (0, 4.5) {\rl{بردگی}\\% FIXED: گره چندخطی
+  \rl{\lr{\tiny Slavery}}%
+  };
+
+\node[enemy, fill=AccentRed!20, draw=AccentRed, text=AccentRed!80]
+  (tyranny) at (4, 3.2) {\rl{استبداد}\\% FIXED: گره چندخطی
+  \rl{\lr{\tiny Tyranny}}%
+  };
+
+\node[enemy, fill=AccentPurple!20, draw=AccentPurple, text=AccentPurple]
+  (domination) at (5, 0) {\rl{سلطه}\\% FIXED: گره چندخطی
+  \rl{\lr{\tiny Domination}}%
+  };
+
+\node[enemy, fill=EraModern!20, draw=EraModern, text=EraModern]
+  (alienation) at (4, -3.2) {\rl{از خودبیگانگی}\\% FIXED: گره چندخطی
+  \rl{\lr{\tiny Alienation}}%
+  };
+
+\node[enemy, fill=EraEarlyMod!30, draw=EraEarlyMod, text=EraEarlyMod]
+  (coercion) at (0, -4.5) {\rl{اجبار}\\% FIXED: گره چندخطی
+  \rl{\lr{\tiny Coercion}}%
+  };
+
+\node[enemy, fill=EraContemp!20, draw=EraContemp, text=EraContemp]
+  (poverty) at (-4, -3.2) {\rl{محرومیت}\\% FIXED: گره چندخطی
+  \rl{\lr{\tiny Deprivation}}%
+  };
+
+\node[enemy, fill=AccentGold!30, draw=AccentAmber, text=AccentAmber!80]
+  (ignorance) at (-5, 0) {\rl{جهل و}\\% FIXED: گره چندخطی
+  \rl{سلب آگاهی}\\%
+  \rl{\lr{\tiny Epistemic Inj.}}%
+  };
+
+\node[enemy, fill=AccentTeal!20, draw=AccentTeal, text=AccentTeal]
+  (paternalism) at (-4, 3.2) {\rl{پدرسالاری}\\% FIXED: گره چندخطی
+  \rl{\lr{\tiny Paternalism}}%
+  };
+
+% فلش‌ها با برچسب مکتب
+\draw[arrow] (F.north) -- node[lbl, right] {\rl{باستان}\\% FIXED: \rl
+  \rl{\lr{/Stoics}}%
+  } (slavery.south);
+\draw[arrow] (F.north east) -- node[lbl, right] {\rl{جمهوری‌خواهی}\\%
+  \rl{\lr{Arendt}}%
+  } (tyranny.south west);
+\draw[arrow] (F.east) -- node[lbl, above] {\rl{پتیت}\\%
+  \rl{\lr{/Pettit}}%
+  } (domination.west);
+\draw[arrow] (F.south east) -- node[lbl, right] {\rl{مارکس}\\%
+  \rl{\lr{/Marx}}%
+  } (alienation.north west);
+\draw[arrow] (F.south) -- node[lbl, right] {\rl{هابز}\\%
+  \rl{\lr{/Berlin}}%
+  } (coercion.north);
+\draw[arrow] (F.south west) -- node[lbl, right] {\rl{سن}\\%
+  \rl{\lr{/Sen}}%
+  } (poverty.north east);
+\draw[arrow] (F.west) -- node[lbl, above] {\rl{فریکر}\\%
+  \rl{\lr{/Foucault}}%
+  } (ignorance.east);
+\draw[arrow] (F.north west) -- node[lbl, right] {\rl{میل}\\%
+  \rl{\lr{/Rawls}}%
+  } (paternalism.south east);
+
+\end{tikzpicture}
+\end{figure}
+
+\newpage

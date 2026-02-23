@@ -1,0 +1,110 @@
+% ============================================================
+%  صفحه‌ی عنوان و معرفی
+% ============================================================
+\begin{titlepage}
+\thispagestyle{empty}
+
+% ─── نوار بالایی ──────────────────────────────────────────────
+\begin{tikzpicture}[remember picture, overlay]
+  % پس‌زمینه‌ی بالا
+  \fill[PrimaryDeep] (current page.north west) rectangle
+       ([yshift=-4.5cm]current page.north east);
+  % نوار طلایی
+  \fill[AccentGold] ([yshift=-4.5cm]current page.north west) rectangle
+       ([yshift=-4.9cm]current page.north east);
+  % نوار پایین
+  \fill[PrimaryLight] ([yshift=-4.9cm]current page.north west) rectangle
+       ([yshift=-5.3cm]current page.north east);
+
+  % متن بالا (راست‌چین فارسی)
+  \node[anchor=east, text=white, font=\Large\bfseries]
+    at ([xshift=-2cm, yshift=-2cm]current page.north east)
+    {\rl{مقاله‌ی تحلیلی–تطبیقی در فلسفه‌ی سیاسی}}; % FIXED: \rl
+
+  \node[anchor=east, text=NeutralLight, font=\normalsize]
+    at ([xshift=-2cm, yshift=-3.5cm]current page.north east)
+    {\rl{بررسی تاریخی، مکتبی و تطبیقی مفهوم آزادی در اندیشه‌ی سیاسی}}; % FIXED: \rl
+
+  % نوار پایین صفحه
+  \fill[PrimaryDeep] (current page.south west) rectangle
+       ([yshift=2cm]current page.south east);
+  \fill[AccentGold] ([yshift=2cm]current page.south west) rectangle
+       ([yshift=2.3cm]current page.south east);
+
+  \node[anchor=east, text=white, font=\small]
+    at ([xshift=-2cm, yshift=1cm]current page.south east)
+    {{\bfseries \rl{مهدی سالم}} \quad\textbar\quad ۳ اسفند ۱۴۰۴ \quad\textbar\quad ۲۲ فوریه ۲۰۲۶}; % FIXED: \rl
+\end{tikzpicture}
+
+\vspace{5cm}
+
+% ─── عنوان اصلی ───────────────────────────────────────────────
+\begin{center}
+{\fontsize{42}{50}\selectfont\bfseries\color{PrimaryDeep}آزادی}
+
+\vspace{0.3cm}
+{\fontsize{28}{36}\selectfont\color{NeutralDark} به مثابه\ldots}
+
+\vspace{0.8cm}
+\begin{tikzpicture}
+  \draw[line width=2pt, AccentGold] (0,0) -- (12,0);
+  \fill[AccentGold] (6,0) circle (4pt);
+\end{tikzpicture}
+
+\vspace{0.8cm}
+{\Large\color{TextSecond}
+  جغرافیای مفهومی، امواج تاریخی و تحلیل تطبیقی\\[0.3cm]
+  گفتمان‌های رقیب در فلسفه‌ی سیاسی
+}
+
+\vspace{1.5cm}
+
+% ─── اطلاعات نویسنده ──────────────────────────────────────────
+\begin{tcolorbox}[
+  enhanced, width=10cm,
+  colback=BgCool, colframe=PrimaryMid,
+  rounded corners, drop shadow,
+]
+\centering
+{\large\bfseries\color{PrimaryDeep} مهدی سالم}\\[0.3cm]
+{\normalsize\color{TextSecond}
+  پژوهشگر و نویسنده در حوزه‌ی\\
+  گذار دموکراتیک و فلسفه‌ی سیاسی
+}\\[0.4cm]
+\small\color{NeutralDark}
+\lr{\url{MahdiSalem.com}}\\[0.2cm] % FIXED: \lr{\url{...}}
+{\color{AccentGold}\rule{6cm}{0.5pt}}\\[0.2cm]
+{\small ۳ اسفند ۱۴۰۴ \textbar{} ۲۲ فوریه ۲۰۲۶}
+\end{tcolorbox}
+
+\end{center}
+
+\vspace{1cm}
+
+% ─── خلاصه‌ی اجرایی ───────────────────────────────────────────
+\begin{tcolorbox}[
+  enhanced, breakable,
+  colback=BgWarm, colframe=AccentGold,
+  title={\bfseries چکیده},
+  fonttitle=\large\bfseries,
+  attach boxed title to top right={yshift=-2mm},
+  boxed title style={colback=AccentGold, colframe=AccentAmber},
+]
+این مقاله‌ی تحلیلی–تطبیقی، مفهوم آزادی را از سه منظر بررسی می‌کند: نخست، \textbf{جغرافیای مفهومی} آن را در قالب نقشه‌ای از تعبیرسازی‌های تاریخی ترسیم می‌کند؛ دوم، \textbf{امواج تحول} این مفهوم را از دوران باستان تا دوران دیجیتال دنبال می‌کند؛ و سوم، \textbf{تحلیل تطبیقی} مکاتب رقیب—از لیبرالیسم تا مارکسیسم، از جمهوری‌خواهی تا فمینیسم، از سنت تحلیلی تا سنت قاره‌ای—را با تمرکز بر دشمنان مفهومی، انسان‌شناسی‌های زیربنایی، و تنش‌های ساختاری ارائه می‌دهد. در پیوست‌ها، سنت اسلامی–ایرانی با عمق بیشتری تحلیل می‌شود.
+
+\vspace{0.3cm}
+\small\color{NeutralDark}
+\textbf{کلیدواژه‌ها:} آزادی منفی، آزادی مثبت، عدم سلطه، قابلیت، خودفرمانی، رهایی، سنت جمهوری‌خواه، لیبرالیسم، فلسفه‌ی سیاسی تطبیقی
+\end{tcolorbox}
+
+\end{titlepage}
+
+% ─── فهرست مطالب ──────────────────────────────────────────────
+\newpage
+\thispagestyle{empty}
+\begin{center}
+{\Large\bfseries\color{PrimaryDeep} فهرست مطالب}
+\vspace{0.5cm}
+\end{center}
+\tableofcontents
+\newpage
